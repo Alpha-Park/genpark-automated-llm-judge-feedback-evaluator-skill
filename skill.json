@@ -1,0 +1,42 @@
+{
+  "name": "genpark-automated-llm-judge-feedback-evaluator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Multi-criteria automated LLM judge scoring engine providing rubric-based qualitative feedback and pass/fail thresholds.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "governance",
+  "tags": [
+    "braintrust",
+    "langfuse",
+    "llm-judge",
+    "evaluations",
+    "rubric-scoring"
+  ],
+  "inputs": {
+    "input_prompt": {
+      "type": "string"
+    },
+    "agent_output": {
+      "type": "string"
+    },
+    "rubric_criteria": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "evaluation_id": {
+      "type": "string"
+    },
+    "aggregate_score": {
+      "type": "number"
+    },
+    "pass_threshold_met": {
+      "type": "boolean"
+    },
+    "judge_eval_dashboard_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
